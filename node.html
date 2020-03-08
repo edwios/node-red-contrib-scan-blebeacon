@@ -1,0 +1,33 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Scan BLE Beacons',{
+        category: 'function',
+        color: '#61D0D4',
+        defaults: {
+            name: {value:""},
+            delay: {value: "5000", required: true, validate: RED.validators.number()},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "bridge-dash.png",
+        label: function() {
+            return this.name||"Scan BLE Beacons";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Scan BLE Beacons">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-delay"><i class="fa fa-clock-o"></i> Delay</label>
+        <input type="text" id="node-input-delay" style="text-align:end; width:50px !important">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="Scan BLE Beacons">
+    <p>Recieve Advertise Messages from BLE Beacons</p>
+</script>
+
+
